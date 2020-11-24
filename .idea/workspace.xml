@@ -1,110 +1,188 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="38df4a42-d39b-41ef-83a8-aa77bde6818f" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/shahada2.0-hyperledger.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-go/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-go/assetTransfer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-go/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-go/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-java/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-java/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-java/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-java/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-java/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-java/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-java/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-java/src/main/java/application/java/App.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-java/src/main/java/application/java/EnrollAdmin.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-java/src/main/java/application/java/RegisterUser.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-java/src/main/resources/log4j.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-javascript/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-javascript/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-javascript/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-javascript/app.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/application-javascript/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-external/.dockerignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-external/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-external/Dockerfile" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-external/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-external/assetTransfer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-external/chaincode.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-external/connection.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-external/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-external/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-external/metadata.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-external/sampleBuilder/bin/build" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-external/sampleBuilder/bin/detect" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-external/sampleBuilder/bin/release" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-go/assetTransfer.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-go/chaincode/mocks/chaincodestub.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-go/chaincode/mocks/statequeryiterator.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-go/chaincode/mocks/transaction.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-go/chaincode/smartcontract.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-go/chaincode/smartcontract_test.go" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-go/go.mod" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-go/go.sum" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-java/.gitattributes" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-java/build.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-java/config/checkstyle/checkstyle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-java/config/checkstyle/suppressions.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-java/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-java/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-java/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-java/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-java/settings.gradle" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-java/src/main/java/org/hyperledger/fabric/samples/assettransfer/Asset.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-java/src/main/java/org/hyperledger/fabric/samples/assettransfer/AssetTransfer.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-java/src/test/java/org/hyperledger/fabric/samples/assettransfer/AssetTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-java/src/test/java/org/hyperledger/fabric/samples/assettransfer/AssetTransferTest.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/.eslintignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/.eslintrc.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/index.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/test/assetTransfer.test.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-typescript/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-typescript/package.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-typescript/src/asset.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-typescript/src/assetTransfer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-typescript/src/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-typescript/tsconfig.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-typescript/tslint.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/configtxgen" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/configtxlator" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/cryptogen" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/discover" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/fabric-ca-client" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/fabric-ca-server" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/idemixgen" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/orderer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/bin/peer" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/configtx.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/core.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/config/orderer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/.env" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/README.md" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/configtx/configtx.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/docker/docker-compose-ca.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/docker/docker-compose-test-net.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/network.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/organizations/ccp-generate.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/organizations/ccp-template.json" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/organizations/ccp-template.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/organizations/cryptogen/crypto-config-orderer.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/organizations/cryptogen/crypto-config-org1.yaml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/organizations/fabric-ca/registerEnroll.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/scriptUtils.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/scripts/createChannel.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/scripts/deployCC.sh" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/my-network/scripts/envVar.sh" afterDir="false" />
+    <list default="true" id="38df4a42-d39b-41ef-83a8-aa77bde6818f" name="Default Changelist" comment="init">
+      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/darwin-amd64/configtxgen" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/darwin-amd64/configtxlator" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/darwin-amd64/cryptogen" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/darwin-amd64/discover" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/darwin-amd64/fabric-ca-client" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/darwin-amd64/fabric-ca-server" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/darwin-amd64/idemixgen" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/darwin-amd64/orderer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/darwin-amd64/peer" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-network/organizations/cryptogen/crypto-config-org2.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SU.shahada.ae/ca/ca.SU.shahada.ae-cert.pem" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/.env" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/README.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/configtx/configtx.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/docker/docker-compose-ca.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/docker/docker-compose-couch.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/docker/docker-compose-test-net.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/my.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/network.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/organizations/ccp-generate.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/organizations/ccp-template.json" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/organizations/ccp-template.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/organizations/cryptogen/crypto-config-orderer.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/organizations/cryptogen/crypto-config-org1.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/organizations/cryptogen/crypto-config-org2.yaml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/organizations/fabric-ca/registerEnroll.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/scriptUtils.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/scripts/createChannel.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/scripts/createChannelSNM.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/scripts/deployCC.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/scripts/dp.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/scripts/envVar.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/scripts/org3-scripts/envVarCLI.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/scripts/org3-scripts/step1org3.sh" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/test-network/scripts/org3-scripts/step2org3.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset-transfer-basic/application-javascript/app.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset-transfer-basic/application-javascript/app.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js" beforeDir="false" afterPath="$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/configtxgen" beforeDir="false" afterPath="$PROJECT_DIR$/linux-amd64/configtxgen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/configtxlator" beforeDir="false" afterPath="$PROJECT_DIR$/linux-amd64/configtxlator" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/cryptogen" beforeDir="false" afterPath="$PROJECT_DIR$/linux-amd64/cryptogen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/discover" beforeDir="false" afterPath="$PROJECT_DIR$/linux-amd64/discover" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/fabric-ca-client" beforeDir="false" afterPath="$PROJECT_DIR$/linux-amd64/fabric-ca-client" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/fabric-ca-server" beforeDir="false" afterPath="$PROJECT_DIR$/linux-amd64/fabric-ca-server" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/idemixgen" beforeDir="false" afterPath="$PROJECT_DIR$/linux-amd64/idemixgen" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/orderer" beforeDir="false" afterPath="$PROJECT_DIR$/linux-amd64/orderer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/bin/peer" beforeDir="false" afterPath="$PROJECT_DIR$/linux-amd64/peer" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/channel-artifacts/SNMMSPanchors.tx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/channel-artifacts/shchannel.block" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/channel-artifacts/shchannel.tx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/configtx/configtx.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/my-network/configtx/configtx.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/docker/docker-compose-ca.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/my-network/docker/docker-compose-ca.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/docker/docker-compose-test-net.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/my-network/docker/docker-compose-test-net.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/log.txt" beforeDir="false" afterPath="$PROJECT_DIR$/my-network/log.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/network.sh" beforeDir="false" afterPath="$PROJECT_DIR$/my-network/network.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ccp-generate.sh" beforeDir="false" afterPath="$PROJECT_DIR$/my-network/organizations/ccp-generate.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/cryptogen/crypto-config-orderer.yaml" beforeDir="false" afterPath="$PROJECT_DIR$/my-network/organizations/cryptogen/crypto-config-orderer.yaml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/SNM/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/SNM/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/SNM/ca-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/SNM/fabric-ca-server-config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/SNM/fabric-ca-server.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/SNM/msp/keystore/19f8f764d1e2a0ecf1f25f992829943c6e2c51d7c009a78985b6dfb8ccda648f_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/SNM/msp/keystore/403b217ef3fb2ac5338ad3da679cea516c71dc9851d4454fc3f7b99307289cb7_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/SNM/msp/keystore/IssuerRevocationPrivateKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/SNM/msp/keystore/IssuerSecretKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/SNM/tls-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/ordererOrg/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/ordererOrg/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/ordererOrg/ca-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/ordererOrg/fabric-ca-server-config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/ordererOrg/fabric-ca-server.db" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/ordererOrg/msp/keystore/41e48a2cbca0465fe3155eb3eec47194071ec2cf16d213965d5b448077c2e641_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/ordererOrg/msp/keystore/44b9b3ff063bbccf1305bdf80655f0c09afb4b04ea2f24d566f870a3fa9adadf_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/ordererOrg/msp/keystore/IssuerRevocationPrivateKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/ordererOrg/msp/keystore/IssuerSecretKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/ordererOrg/tls-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/fabric-ca/registerEnroll.sh" beforeDir="false" afterPath="$PROJECT_DIR$/my-network/organizations/fabric-ca/registerEnroll.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/fabric-ca-client-config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/msp/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/msp/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/msp/cacerts/localhost-9054-ca-orderer.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/msp/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/msp/keystore/d0e4775bbdabc88c7ecb90d96c5f70d20743228198bac4525b1261a623a4ed4b_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/msp/signcerts/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/msp/tlscacerts/tlsca.shahada.ae-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/msp/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/msp/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/msp/cacerts/localhost-9054-ca-orderer.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/msp/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/msp/keystore/c505b9acf3db28c3baa98ce92b28d001971098e18beba298c8fab7d6d497e4a4_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/msp/signcerts/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/msp/tlscacerts/tlsca.shahada.ae-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/tls/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/tls/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/tls/ca.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/tls/keystore/54f38febd185844694bd030754068d83e630c4498d2363f278d8c5805e8b3149_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/tls/server.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/tls/server.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/tls/signcerts/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/tls/tlscacerts/tls-localhost-9054-ca-orderer.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/msp/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/msp/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/msp/cacerts/localhost-9054-ca-orderer.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/msp/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/msp/keystore/496b321716b05524e982601a58cd787e1fdd6748158651eea5108cb9836787ac_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/msp/signcerts/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/msp/tlscacerts/tlsca.shahada.ae-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/ca.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/keystore/8a7f7ad4220a29423a2269404ba9f5b652da30397222feb8ac6ec11bc6ad93a9_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/server.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/server.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/signcerts/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/tlscacerts/tls-localhost-9054-ca-orderer.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/msp/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/msp/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/msp/cacerts/localhost-9054-ca-orderer.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/msp/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/msp/keystore/cd77d97aa6a804b88824c20bfbc807709b27ff6fc38fcba18720680625db13ad_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/msp/signcerts/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/msp/tlscacerts/tlsca.shahada.ae-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/ca.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/keystore/b00d1e889aedc94288180b545f4fc309c97d2c1655fa40c132fb916337563c1b_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/server.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/server.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/signcerts/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/tlscacerts/tls-localhost-9054-ca-orderer.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/users/Admin@shahada.ae/msp/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/users/Admin@shahada.ae/msp/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/users/Admin@shahada.ae/msp/cacerts/localhost-9054-ca-orderer.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/users/Admin@shahada.ae/msp/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/users/Admin@shahada.ae/msp/keystore/b78a4d8bfc3f3ce20bbfab10982bf5f4921d8af299a75e0cea356a8365a225a8_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/ordererOrganizations/shahada.ae/users/Admin@shahada.ae/msp/signcerts/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/ca/ca.SNM.shahada.ae-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/connection-org1.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/connection-org1.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/fabric-ca-client-config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/msp/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/msp/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/msp/cacerts/localhost-7054-ca-SNM.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/msp/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/msp/keystore/c4d8287b5026736af338d19b9d693892ad3178e0cac6bc8580832a6bfef055f9_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/msp/signcerts/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/msp/tlscacerts/ca.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/msp/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/msp/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/msp/cacerts/localhost-7054-ca-SNM.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/msp/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/msp/keystore/9da532a17e6c11d10276c6eceab41f5b15b8a95eb4d4f078bb2c9f54e8e22f4a_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/msp/signcerts/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/ca.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/keystore/5b174b79a530828d2a11a5f198bef219e59f9df5ca1d333cd75e45d17bdf2407_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/server.crt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/server.key" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/signcerts/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/tlscacerts/tls-localhost-7054-ca-SNM.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/tlsca/tlsca.SNM.shahada.ae-cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/users/Admin@SNM.shahada.ae/msp/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/users/Admin@SNM.shahada.ae/msp/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/users/Admin@SNM.shahada.ae/msp/cacerts/localhost-7054-ca-SNM.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/users/Admin@SNM.shahada.ae/msp/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/users/Admin@SNM.shahada.ae/msp/keystore/4b7b1ac25182174186f13e5d1d61567f27c90d340846cef856ea4b68ff001e25_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/users/Admin@SNM.shahada.ae/msp/signcerts/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/users/User1@SNM.shahada.ae/msp/IssuerPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/users/User1@SNM.shahada.ae/msp/IssuerRevocationPublicKey" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/users/User1@SNM.shahada.ae/msp/cacerts/localhost-7054-ca-SNM.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/users/User1@SNM.shahada.ae/msp/config.yaml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/users/User1@SNM.shahada.ae/msp/keystore/e465a90858389dc3ee8aab917eeb0c03e7924dfc85a35a271268a5dc29bc3607_sk" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/users/User1@SNM.shahada.ae/msp/signcerts/cert.pem" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/scripts/createChannel.sh" beforeDir="false" afterPath="$PROJECT_DIR$/my-network/scripts/createChannel.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/scripts/deployCC.sh" beforeDir="false" afterPath="$PROJECT_DIR$/my-network/scripts/deployCC.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/scripts/envVar.sh" beforeDir="false" afterPath="$PROJECT_DIR$/my-network/scripts/envVar.sh" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/my-network/system-genesis-block/genesis.block" beforeDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
@@ -116,15 +194,99 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf />
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
+      <file pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/test-network/configtx/configtx.yaml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="419">
+              <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
+            </state>
+          </provider>
+        </entry>
+      </file>
+    </leaf>
+  </component>
+  <component name="FindInProjectRecents">
+    <findStrings>
+      <find>path=</find>
+      <find>OS_ARCH</find>
+      <find>export PATH=${PWD}/../bin:$PATH</find>
+      <find>SNM.shahada.ae/peers/peer0.SU.</find>
+      <find>SNM</find>
+      <find>hsm</find>
+      <find>SUMSP</find>
+      <find>/ca/</find>
+      <find>org1</find>
+      <find>org2</find>
+      <find>SN</find>
+      <find>ca.SNM.shahada.ae-cert</find>
+      <find>7054</find>
+      <find>org1.example.com</find>
+      <find>Deploying</find>
+      <find>$PEER_CONN_PARMS</find>
+      <find>peer.address</find>
+      <find>parsePeerConnectionParameters</find>
+      <find>peer0.SNM.shahada.ae</find>
+      <find>7052</find>
+      <find>7051</find>
+      <find>export PATH</find>
+      <find>crypto-config-orderer.yaml</find>
+      <find>Org1MSP</find>
+      <find>Org1</find>
+      <find>Org2MSP</find>
+      <find>org1msp</find>
+      <find>peer0.org1.example.com</find>
+      <find>example.com</find>
+    </findStrings>
+    <replaceStrings>
+      <replace>SUMSP</replace>
+      <replace>shahada.ae</replace>
+    </replaceStrings>
+    <dirStrings>
+      <dir>$PROJECT_DIR$</dir>
+    </dirStrings>
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
+  <component name="IdeDocumentHistory">
+    <option name="CHANGED_PATHS">
+      <list>
+        <option value="$PROJECT_DIR$/my-network/configtx/configtx.yaml" />
+        <option value="$PROJECT_DIR$/my-network/organizations/cryptogen/crypto-config-org2.yaml" />
+        <option value="$PROJECT_DIR$/my-network/scripts/createChannel.sh" />
+        <option value="$PROJECT_DIR$/my-network/organizations/ccp-generate.sh" />
+        <option value="$PROJECT_DIR$/my-network/docker/docker-compose-ca.yaml" />
+        <option value="$PROJECT_DIR$/my-network/scripts/envVar.sh" />
+        <option value="$PROJECT_DIR$/my-network/organizations/peerOrganizations/SU.shahada.ae/ca/ca.SNM.shahada.ae-cert.pem" />
+        <option value="$PROJECT_DIR$/my-network/organizations/fabric-ca/registerEnroll.sh" />
+        <option value="$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js" />
+        <option value="$PROJECT_DIR$/test-application/javascript/AppUtil.js" />
+        <option value="$PROJECT_DIR$/asset-transfer-basic/application-javascript/app.js" />
+        <option value="$PROJECT_DIR$/my-network/scripts/deployCC.sh" />
+        <option value="$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/package.json" />
+        <option value="$PROJECT_DIR$/my-network/docker/docker-compose-test-net.yaml" />
+        <option value="$PROJECT_DIR$/my-network/organizations/cryptogen/crypto-config-orderer.yaml" />
+        <option value="$PROJECT_DIR$/my-network/network.sh" />
+        <option value="$PROJECT_DIR$/test-network/docker/docker-compose-ca.yaml" />
+        <option value="$PROJECT_DIR$/test-network/docker/docker-compose-test-net.yaml" />
+        <option value="$PROJECT_DIR$/test-network/configtx/configtx.yaml" />
+        <option value="$PROJECT_DIR$/test-network/organizations/cryptogen/crypto-config-orderer.yaml" />
+        <option value="$PROJECT_DIR$/test-network/organizations/cryptogen/crypto-config-org1.yaml" />
+        <option value="$PROJECT_DIR$/test-network/organizations/cryptogen/crypto-config-org2.yaml" />
+        <option value="$PROJECT_DIR$/test-network/organizations/fabric-ca/registerEnroll.sh" />
+        <option value="$PROJECT_DIR$/test-network/organizations/ccp-generate.sh" />
+        <option value="$PROJECT_DIR$/test-network/organizations/ccp-template.json" />
+        <option value="$PROJECT_DIR$/test-network/organizations/ccp-template.yaml" />
+        <option value="$PROJECT_DIR$/test-network/docker/docker-compose-couch.yaml" />
+        <option value="$PROJECT_DIR$/test-network/my.sh" />
+      </list>
+    </option>
+  </component>
   <component name="ProjectFrameBounds" extendedState="6">
     <option name="y" value="23" />
     <option name="width" value="1680" />
-    <option name="height" value="987" />
+    <option name="height" value="1027" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
   <component name="ProjectView">
@@ -143,7 +305,13 @@
             <path>
               <item name="shahada2.0-hyperledger" type="b2602c69:ProjectViewProjectNode" />
               <item name="shahada2.0-hyperledger" type="462c0819:PsiDirectoryNode" />
-              <item name="my-network" type="462c0819:PsiDirectoryNode" />
+              <item name="test-network" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="shahada2.0-hyperledger" type="b2602c69:ProjectViewProjectNode" />
+              <item name="shahada2.0-hyperledger" type="462c0819:PsiDirectoryNode" />
+              <item name="test-network" type="462c0819:PsiDirectoryNode" />
+              <item name="configtx" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
@@ -156,6 +324,14 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_interpreter_path.stuck_in_default_project" value="undefined stuck path" />
     <property name="nodejs_npm_path_reset_for_default_project" value="true" />
+    <property name="nodejs_package_manager_path" value="npm" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/bin" />
+      <recent name="$PROJECT_DIR$/my-network/organizations/cryptogen" />
+    </key>
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -180,17 +356,29 @@
       <option name="presentableId" value="Default" />
       <updated>1604604719058</updated>
       <workItem from="1604604720436" duration="173000" />
-      <workItem from="1604605183836" duration="854000" />
+      <workItem from="1604605183836" duration="3061000" />
+      <workItem from="1604742106739" duration="20837000" />
+      <workItem from="1606034068528" duration="4296000" />
+      <workItem from="1606205934379" duration="5097000" />
     </task>
+    <task id="LOCAL-00001" summary="init">
+      <created>1604606390048</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1604606390048</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1027000" />
+    <option name="totallyTimeSpent" value="33464000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="23" width="1680" height="987" extended-state="6" />
+    <editor active="true" />
     <layout>
-      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.24954791" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22965641" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="bottom" id="Message" order="0" />
@@ -202,7 +390,7 @@
       <window_info anchor="bottom" id="TODO" order="6" />
       <window_info anchor="bottom" id="Docker" order="7" show_stripe_button="false" />
       <window_info anchor="bottom" id="Version Control" order="8" />
-      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.32960895" />
+      <window_info anchor="bottom" id="Terminal" order="9" visible="true" weight="0.19776537" />
       <window_info anchor="bottom" id="Event Log" order="10" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="right" id="Ant Build" order="1" weight="0.25" />
@@ -212,26 +400,282 @@
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
   </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init" />
+    <option name="LAST_COMMIT_MESSAGE" value="init" />
+  </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/my-network/docker/docker-compose-ca.yaml">
+    <entry file="file://$PROJECT_DIR$/config/configtx.yaml">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="225">
-          <caret line="15" column="21" selection-start-line="15" selection-start-column="21" selection-end-line="15" selection-end-column="21" />
+        <state relative-caret-position="-8630" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/.env">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="15">
+          <caret line="1" column="16" selection-start-line="1" selection-start-column="10" selection-end-line="1" selection-end-column="16" />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/my-network/README.md">
-      <provider selected="true" editor-type-id="split-provider[text-editor;markdown-preview-editor]">
-        <state split_layout="SPLIT">
-          <first_editor />
-          <second_editor />
+    <entry file="file://$PROJECT_DIR$/my-network/scripts/createChannel.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1198">
+          <caret line="32" column="21" selection-start-line="32" selection-start-column="21" selection-end-line="32" selection-end-column="21" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/ccp-template.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="9">
+          <caret line="15" column="28" selection-start-line="15" selection-start-column="28" selection-end-line="15" selection-end-column="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/peerOrganizations/SU.shahada.ae/msp/IssuerRevocationPublicKey" />
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/ca/ca.SNM.shahada.ae-cert.pem" />
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/msp/cacerts/localhost-7054-ca-SNM.pem" />
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/peerOrganizations/SU.shahada.ae/msp/cacerts/localhost-8054-ca-SU.pem" />
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/peerOrganizations/SU.shahada.ae/ca/ca.SU.shahada.ae-cert.pem" />
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/peerOrganizations/SNM.shahada.ae/connection-org1.json" />
+    <entry file="file://$PROJECT_DIR$/test-application/javascript/AppUtil.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="405">
+          <caret line="27" column="30" lean-forward="true" selection-start-line="27" selection-start-column="30" selection-end-line="27" selection-end-column="30" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-application/javascript/CAUtil.js">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/peerOrganizations/SU.shahada.ae/connection-org2.json" />
+    <entry file="file://$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/test/assetTransfer.test.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="23">
+          <caret line="28" lean-forward="true" selection-start-line="28" selection-end-line="28" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset-transfer-basic/application-javascript/package.json">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/ccp-generate.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="118">
+          <caret line="18" column="25" selection-start-line="18" selection-start-column="25" selection-end-line="18" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset-transfer-basic/application-javascript/app.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-725">
+          <caret line="23" lean-forward="true" selection-start-line="23" selection-end-line="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/config/core.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="736" lean-forward="true" selection-start-line="736" selection-end-line="736" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/peerOrganizations/SU.shahada.ae/msp/config.yaml" />
+    <entry file="file://$PROJECT_DIR$/test-network/addOrg3/docker/docker-compose-org3.yaml" />
+    <entry file="file://$PROJECT_DIR$/test-network/addOrg3/fabric-ca/registerEnroll.sh" />
+    <entry file="file://$PROJECT_DIR$/test-network/addOrg3/addOrg3.sh" />
+    <entry file="file://$PROJECT_DIR$/test-network/addOrg3/ccp-generate.sh" />
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/cryptogen/crypto-config-org2.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="133">
+          <caret line="9" column="32" selection-start-line="9" selection-start-column="32" selection-end-line="9" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/scriptUtils.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-1740" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/scripts/envVar.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="365">
+          <caret line="28" column="6" selection-start-line="28" selection-start-column="6" selection-end-line="28" selection-end-column="6" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/log.txt">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/scripts/deployCC.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="799">
+          <caret line="343" selection-start-line="343" selection-end-line="343" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="2295">
+          <caret line="153" column="23" selection-start-line="153" selection-start-column="23" selection-end-line="153" selection-end-column="23" />
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/index.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <folding>
+            <element signature="n#!!doc" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/asset-transfer-basic/chaincode-javascript/package.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="68">
+          <caret line="15" column="25" lean-forward="true" selection-start-line="15" selection-start-column="25" selection-end-line="15" selection-end-column="25" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/docker/docker-compose-ca.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="195">
+          <caret line="13" column="38" selection-start-line="13" selection-start-column="33" selection-end-line="13" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/docker/docker-compose-test-net.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="843">
+          <caret line="189" column="35" selection-start-line="189" selection-start-column="35" selection-end-line="189" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/fabric-ca/registerEnroll.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-115">
+          <caret line="218" column="5" selection-start-line="218" selection-start-column="5" selection-end-line="218" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/cryptogen/crypto-config-org1.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-337" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/organizations/cryptogen/crypto-config-orderer.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="345">
+          <caret line="23" column="13" lean-forward="true" selection-start-line="23" selection-start-column="13" selection-end-line="23" selection-end-column="13" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-network/.env">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
+    <entry file="file://$PROJECT_DIR$/my-network/configtx/configtx.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="483">
+          <caret line="348" column="22" selection-start-line="348" selection-start-column="22" selection-end-line="348" selection-end-column="22" />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/my-network/network.sh">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="223">
-          <caret line="325" lean-forward="true" selection-start-line="325" selection-end-line="325" />
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="16" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-network/organizations/cryptogen/crypto-config-org1.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="495">
+          <caret line="33" column="44" selection-start-line="33" selection-start-column="44" selection-end-line="33" selection-end-column="44" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-network/organizations/cryptogen/crypto-config-orderer.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" selection-start-line="14" selection-end-line="14" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-network/organizations/cryptogen/crypto-config-org2.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="11" column="38" lean-forward="true" selection-start-line="11" selection-start-column="38" selection-end-line="11" selection-end-column="38" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-network/organizations/fabric-ca/registerEnroll.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="210">
+          <caret line="14" column="85" selection-start-line="14" selection-start-column="85" selection-end-line="14" selection-end-column="85" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-network/organizations/ccp-generate.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="585">
+          <caret line="44" column="106" selection-start-line="44" selection-start-column="106" selection-end-line="44" selection-end-column="106" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-network/organizations/ccp-template.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="555">
+          <caret line="37" column="33" selection-start-line="37" selection-start-column="33" selection-end-line="37" selection-end-column="33" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-network/organizations/ccp-template.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="390">
+          <caret line="26" column="26" selection-start-line="26" selection-start-column="26" selection-end-line="26" selection-end-column="26" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-network/docker/docker-compose-couch.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="293">
+          <caret line="45" column="32" selection-start-line="45" selection-start-column="32" selection-end-line="45" selection-end-column="32" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-network/docker/docker-compose-ca.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="240">
+          <caret line="16" column="40" selection-start-line="16" selection-start-column="40" selection-end-line="16" selection-end-column="40" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-network/my.sh">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="532">
+          <caret line="60" column="4" lean-forward="true" selection-start-line="60" selection-start-column="4" selection-end-line="60" selection-end-column="4" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-network/docker/docker-compose-test-net.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="1605">
+          <caret line="107" column="52" selection-start-line="107" selection-start-column="52" selection-end-line="107" selection-end-column="52" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/test-network/configtx/configtx.yaml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="419">
+          <caret line="44" column="16" selection-start-line="44" selection-start-column="16" selection-end-line="44" selection-end-column="16" />
         </state>
       </provider>
     </entry>

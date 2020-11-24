@@ -147,6 +147,18 @@ class AssetTransfer extends Contract {
         return JSON.stringify(allResults);
     }
 
+    async putinIMplicitSNM(ctx, id, color, size, owner, appraisedValue) {
+        const asset = {
+            ID: id,
+            Color: color,
+            Size: size,
+            Owner: owner,
+            AppraisedValue: appraisedValue,
+        };
+        ctx.stub.putPrivateData("_implicit_org_SNMMSP",id, Buffer.from(JSON.stringify(asset)));
+        return JSON.stringify(asset);
+    }
+
 
 }
 
