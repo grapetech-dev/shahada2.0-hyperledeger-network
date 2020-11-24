@@ -63,208 +63,208 @@ function removeUnwantedImages() {
 
 networkDown
 
-#
-#
-#IMAGE_TAG=latest docker-compose -f $COMPOSE_FILE_CA up -d 2>&1
-#
-#    . organizations/fabric-ca/registerEnroll.sh
-#
-# sleep 5
-#
-#  echo "Create Org1 Identities"
-#
-#    createOrg1
-#
-#    echo "Create Org2 Identities"
-#
-#    createOrg2
-#
-#    echo "Create Orderer Org Identities"
-#
-##    createOrderer
-#
-#   set -x
-#    cryptogen generate --config=./organizations/cryptogen/crypto-config-orderer.yaml --output="organizations"
-#    res=$?
-#    { set +x; } 2>/dev/null
-#
-#
-#  echo "Generate CCP files for Org1 and Org2"
-#  ./organizations/ccp-generate.sh
-#
-#
-# echo "Generating Orderer Genesis block"
-#
-#  configtxgen -profile TwoOrgsOrdererGenesis -channelID system-channel -outputBlock ./system-genesis-block/genesis.block
-#
-#
-#
-#COMPOSE_FILES="-f ${COMPOSE_FILE_BASE}"
-#COMPOSE_FILES="${COMPOSE_FILES} -f ${COMPOSE_FILE_COUCH}"
-#
-#
-#IMAGE_TAG=latest docker-compose ${COMPOSE_FILES} up -d 2>&1
-#
-#
-#
-#CHANNEL_NAME="mychannel"
-#DELAY="3"
-#MAX_RETRY="5"
-#VERBOSE="false"
-#
-#
-#configtxgen -profile TwoOrgsChannel -outputCreateChannelTx ./channel-artifacts/${CHANNEL_NAME}.tx -channelID $CHANNEL_NAME
-#
-#configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/SNMMSPanchors.tx -channelID $CHANNEL_NAME -asOrg SNMMSP
-#
-#configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/SUMSPanchors.tx -channelID $CHANNEL_NAME -asOrg SUMSP
-#
-#export CORE_PEER_TLS_ENABLED=true
-#export ORDERER_CA=${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/msp/tlscacerts/tlsca.shahada.ae-cert.pem
-#export PEER0_ORG1_CA=${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/tls/ca.crt
-#export PEER0_ORG2_CA=${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/tls/ca.crt
-#
-#
-#
-#FABRIC_CFG_PATH=$PWD/../config/
-#
-#    export CORE_PEER_LOCALMSPID="SNMMSP"
-#    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
-#    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp
-#    export CORE_PEER_ADDRESS=localhost:7051
-#
-#set -x
-#peer channel create -o localhost:7050 -c $CHANNEL_NAME --ordererTLSHostnameOverride orderer.shahada.ae -f ./channel-artifacts/${CHANNEL_NAME}.tx --outputBlock ./channel-artifacts/${CHANNEL_NAME}.block --tls --cafile $ORDERER_CA >&log.txt
-#  res=$?
-#  { set +x; } 2>/dev/null
-#  cat log.txt
-#
-#    export CORE_PEER_LOCALMSPID="SNMMSP"
-#    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
-#    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp
-#    export CORE_PEER_ADDRESS=localhost:7051
-#
-#set -x
-#peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block >&log.txt
-#  res=$?
-#  { set +x; } 2>/dev/null
-#  cat log.txt
-#
-#    export CORE_PEER_LOCALMSPID="SUMSP"
-#    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
-#    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.shahada.ae/users/Admin@org2.shahada.ae/msp
-#    export CORE_PEER_ADDRESS=localhost:9051
-#
-#set -x
-#peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block >&log.txt
-#  res=$?
-#  { set +x; } 2>/dev/null
-#  cat log.txt
-#
-#  export CORE_PEER_LOCALMSPID="SNMMSP"
-#    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
-#    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp
-#    export CORE_PEER_ADDRESS=localhost:7051
-#
-#set -x
-#peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.shahada.ae -c $CHANNEL_NAME -f ./channel-artifacts/${CORE_PEER_LOCALMSPID}anchors.tx --tls --cafile $ORDERER_CA >&log.txt
-#  res=$?
-#  { set +x; } 2>/dev/null
-#  cat log.txt
-#
-# export CORE_PEER_LOCALMSPID="SUMSP"
-#    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
-#    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.shahada.ae/users/Admin@org2.shahada.ae/msp
-#    export CORE_PEER_ADDRESS=localhost:9051
-#
-#set -x
-#peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.shahada.ae -c $CHANNEL_NAME -f ./channel-artifacts/${CORE_PEER_LOCALMSPID}anchors.tx --tls --cafile $ORDERER_CA >&log.txt
-#  res=$?
-#  { set +x; } 2>/dev/null
-#  cat log.txt
-#
-#
-#
-#
-#FABRIC_CFG_PATH=$PWD/../config/
-#
-#CC_NAME="basic"
-#CC_VERSION="1.0"
-#CC_SEQUENCE="1"
-#CC_SRC_PATH="../asset-transfer-basic/chaincode-javascript"
-#CC_RUNTIME_LANGUAGE="node"
-#INIT_REQUIRED=""
-#CC_END_POLICY=""
-#CC_COLL_CONFIG=""
-#PEER_CONN_PARMS=" --peerAddresses localhost:7051  --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/tls/ca.crt   --peerAddresses localhost:9051 --tlsRootCertFiles  ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/tls/ca.crt "
-#
-#
-#  export CORE_PEER_LOCALMSPID="SNMMSP"
-#    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
-#    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp
-#    export CORE_PEER_ADDRESS=localhost:7051
-#set -x
-#peer lifecycle chaincode package ${CC_NAME}.tar.gz --path ${CC_SRC_PATH} --lang ${CC_RUNTIME_LANGUAGE} --label ${CC_NAME}_${CC_VERSION} >&log.txt
-#  res=$?
-#  { set +x; } 2>/dev/null
-#  cat log.txt
-#
-#set -x
-#peer lifecycle chaincode install ${CC_NAME}.tar.gz >&log.txt
-#  res=$?
-#  { set +x; } 2>/dev/null
-#  cat log.txt
-#
-#export CORE_PEER_LOCALMSPID="SUMSP"
-#    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
-#    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.shahada.ae/users/Admin@org2.shahada.ae/msp
-#    export CORE_PEER_ADDRESS=localhost:9051
-#
-#set -x
-#peer lifecycle chaincode install ${CC_NAME}.tar.gz >&log.txt
-#  res=$?
-#  { set +x; } 2>/dev/null
-#  cat log.txt
-#
-#
-#  export CORE_PEER_LOCALMSPID="SNMMSP"
-#    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
-#    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp
-#    export CORE_PEER_ADDRESS=localhost:7051
-#
-#  set -x
-#  peer lifecycle chaincode queryinstalled >&log.txt
-#  res=$?
-#  { set +x; } 2>/dev/null
-#  cat log.txt
-#  PACKAGE_ID=$(sed -n "/${CC_NAME}_${CC_VERSION}/{s/^Package ID: //; s/, Label:.*$//; p;}" log.txt)
-#
-#
-#  set -x
-#  peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.shahada.ae --tls --cafile $ORDERER_CA --channelID $CHANNEL_NAME --name ${CC_NAME} --version ${CC_VERSION} --package-id ${PACKAGE_ID} --sequence ${CC_SEQUENCE} ${INIT_REQUIRED} ${CC_END_POLICY} ${CC_COLL_CONFIG} >&log.txt
-#  res=$?
-#  { set +x; } 2>/dev/null
-#  cat log.txt
-#
-#    export CORE_PEER_LOCALMSPID="SUMSP"
-#    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
-#    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.shahada.ae/users/Admin@org2.shahada.ae/msp
-#    export CORE_PEER_ADDRESS=localhost:9051
-#
-#  set -x
-#  peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.shahada.ae --tls --cafile $ORDERER_CA --channelID $CHANNEL_NAME --name ${CC_NAME} --version ${CC_VERSION} --package-id ${PACKAGE_ID} --sequence ${CC_SEQUENCE} ${INIT_REQUIRED} ${CC_END_POLICY} ${CC_COLL_CONFIG} >&log.txt
-#  res=$?
-#  { set +x; } 2>/dev/null
-#  cat log.txt
-#
-#
-#  export CORE_PEER_LOCALMSPID="SNMMSP"
-#    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
-#    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp
-#    export CORE_PEER_ADDRESS=localhost:7051
-#
-#  set -x
-#  peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.shahada.ae --tls --cafile $ORDERER_CA --channelID $CHANNEL_NAME --name ${CC_NAME} $PEER_CONN_PARMS --version ${CC_VERSION} --sequence ${CC_SEQUENCE} ${INIT_REQUIRED} ${CC_END_POLICY} ${CC_COLL_CONFIG} >&log.txt
-#  res=$?
-#  { set +x; } 2>/dev/null
-#  cat log.txt
+
+
+IMAGE_TAG=latest docker-compose -f $COMPOSE_FILE_CA up -d 2>&1
+
+    . organizations/fabric-ca/registerEnroll.sh
+
+ sleep 5
+
+  echo "Create Org1 Identities"
+
+    createOrg1
+
+    echo "Create Org2 Identities"
+
+    createOrg2
+
+    echo "Create Orderer Org Identities"
+
+#    createOrderer
+
+   set -x
+    cryptogen generate --config=./organizations/cryptogen/crypto-config-orderer.yaml --output="organizations"
+    res=$?
+    { set +x; } 2>/dev/null
+
+
+  echo "Generate CCP files for Org1 and Org2"
+  ./organizations/ccp-generate.sh
+
+
+ echo "Generating Orderer Genesis block"
+
+  configtxgen -profile TwoOrgsOrdererGenesis -channelID system-channel -outputBlock ./system-genesis-block/genesis.block
+
+
+
+COMPOSE_FILES="-f ${COMPOSE_FILE_BASE}"
+COMPOSE_FILES="${COMPOSE_FILES} -f ${COMPOSE_FILE_COUCH}"
+
+
+IMAGE_TAG=latest docker-compose ${COMPOSE_FILES} up -d 2>&1
+
+
+
+CHANNEL_NAME="mychannel"
+DELAY="3"
+MAX_RETRY="5"
+VERBOSE="false"
+
+
+configtxgen -profile TwoOrgsChannel -outputCreateChannelTx ./channel-artifacts/${CHANNEL_NAME}.tx -channelID $CHANNEL_NAME
+
+configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/SNMMSPanchors.tx -channelID $CHANNEL_NAME -asOrg SNMMSP
+
+configtxgen -profile TwoOrgsChannel -outputAnchorPeersUpdate ./channel-artifacts/SUMSPanchors.tx -channelID $CHANNEL_NAME -asOrg SUMSP
+
+export CORE_PEER_TLS_ENABLED=true
+export ORDERER_CA=${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/msp/tlscacerts/tlsca.shahada.ae-cert.pem
+export PEER0_ORG1_CA=${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/tls/ca.crt
+export PEER0_ORG2_CA=${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/tls/ca.crt
+
+
+
+FABRIC_CFG_PATH=$PWD/../config/
+
+    export CORE_PEER_LOCALMSPID="SNMMSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp
+    export CORE_PEER_ADDRESS=localhost:7051
+
+set -x
+peer channel create -o localhost:7050 -c $CHANNEL_NAME --ordererTLSHostnameOverride orderer.shahada.ae -f ./channel-artifacts/${CHANNEL_NAME}.tx --outputBlock ./channel-artifacts/${CHANNEL_NAME}.block --tls --cafile $ORDERER_CA >&log.txt
+  res=$?
+  { set +x; } 2>/dev/null
+  cat log.txt
+
+    export CORE_PEER_LOCALMSPID="SNMMSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp
+    export CORE_PEER_ADDRESS=localhost:7051
+
+set -x
+peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block >&log.txt
+  res=$?
+  { set +x; } 2>/dev/null
+  cat log.txt
+
+    export CORE_PEER_LOCALMSPID="SUMSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.shahada.ae/users/Admin@org2.shahada.ae/msp
+    export CORE_PEER_ADDRESS=localhost:9051
+
+set -x
+peer channel join -b ./channel-artifacts/$CHANNEL_NAME.block >&log.txt
+  res=$?
+  { set +x; } 2>/dev/null
+  cat log.txt
+
+  export CORE_PEER_LOCALMSPID="SNMMSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp
+    export CORE_PEER_ADDRESS=localhost:7051
+
+set -x
+peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.shahada.ae -c $CHANNEL_NAME -f ./channel-artifacts/${CORE_PEER_LOCALMSPID}anchors.tx --tls --cafile $ORDERER_CA >&log.txt
+  res=$?
+  { set +x; } 2>/dev/null
+  cat log.txt
+
+ export CORE_PEER_LOCALMSPID="SUMSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.shahada.ae/users/Admin@org2.shahada.ae/msp
+    export CORE_PEER_ADDRESS=localhost:9051
+
+set -x
+peer channel update -o localhost:7050 --ordererTLSHostnameOverride orderer.shahada.ae -c $CHANNEL_NAME -f ./channel-artifacts/${CORE_PEER_LOCALMSPID}anchors.tx --tls --cafile $ORDERER_CA >&log.txt
+  res=$?
+  { set +x; } 2>/dev/null
+  cat log.txt
+
+
+
+
+FABRIC_CFG_PATH=$PWD/../config/
+
+CC_NAME="basic"
+CC_VERSION="1.0"
+CC_SEQUENCE="1"
+CC_SRC_PATH="../asset-transfer-basic/chaincode-javascript"
+CC_RUNTIME_LANGUAGE="node"
+INIT_REQUIRED=""
+CC_END_POLICY=""
+CC_COLL_CONFIG=""
+PEER_CONN_PARMS=" --peerAddresses localhost:7051  --tlsRootCertFiles ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/tls/ca.crt   --peerAddresses localhost:9051 --tlsRootCertFiles  ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/tls/ca.crt "
+
+
+  export CORE_PEER_LOCALMSPID="SNMMSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp
+    export CORE_PEER_ADDRESS=localhost:7051
+set -x
+peer lifecycle chaincode package ${CC_NAME}.tar.gz --path ${CC_SRC_PATH} --lang ${CC_RUNTIME_LANGUAGE} --label ${CC_NAME}_${CC_VERSION} >&log.txt
+  res=$?
+  { set +x; } 2>/dev/null
+  cat log.txt
+
+set -x
+peer lifecycle chaincode install ${CC_NAME}.tar.gz >&log.txt
+  res=$?
+  { set +x; } 2>/dev/null
+  cat log.txt
+
+export CORE_PEER_LOCALMSPID="SUMSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.shahada.ae/users/Admin@org2.shahada.ae/msp
+    export CORE_PEER_ADDRESS=localhost:9051
+
+set -x
+peer lifecycle chaincode install ${CC_NAME}.tar.gz >&log.txt
+  res=$?
+  { set +x; } 2>/dev/null
+  cat log.txt
+
+
+  export CORE_PEER_LOCALMSPID="SNMMSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp
+    export CORE_PEER_ADDRESS=localhost:7051
+
+  set -x
+  peer lifecycle chaincode queryinstalled >&log.txt
+  res=$?
+  { set +x; } 2>/dev/null
+  cat log.txt
+  PACKAGE_ID=$(sed -n "/${CC_NAME}_${CC_VERSION}/{s/^Package ID: //; s/, Label:.*$//; p;}" log.txt)
+
+
+  set -x
+  peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.shahada.ae --tls --cafile $ORDERER_CA --channelID $CHANNEL_NAME --name ${CC_NAME} --version ${CC_VERSION} --package-id ${PACKAGE_ID} --sequence ${CC_SEQUENCE} ${INIT_REQUIRED} ${CC_END_POLICY} ${CC_COLL_CONFIG} >&log.txt
+  res=$?
+  { set +x; } 2>/dev/null
+  cat log.txt
+
+    export CORE_PEER_LOCALMSPID="SUMSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG2_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org2.shahada.ae/users/Admin@org2.shahada.ae/msp
+    export CORE_PEER_ADDRESS=localhost:9051
+
+  set -x
+  peer lifecycle chaincode approveformyorg -o localhost:7050 --ordererTLSHostnameOverride orderer.shahada.ae --tls --cafile $ORDERER_CA --channelID $CHANNEL_NAME --name ${CC_NAME} --version ${CC_VERSION} --package-id ${PACKAGE_ID} --sequence ${CC_SEQUENCE} ${INIT_REQUIRED} ${CC_END_POLICY} ${CC_COLL_CONFIG} >&log.txt
+  res=$?
+  { set +x; } 2>/dev/null
+  cat log.txt
+
+
+  export CORE_PEER_LOCALMSPID="SNMMSP"
+    export CORE_PEER_TLS_ROOTCERT_FILE=$PEER0_ORG1_CA
+    export CORE_PEER_MSPCONFIGPATH=${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp
+    export CORE_PEER_ADDRESS=localhost:7051
+
+  set -x
+  peer lifecycle chaincode commit -o localhost:7050 --ordererTLSHostnameOverride orderer.shahada.ae --tls --cafile $ORDERER_CA --channelID $CHANNEL_NAME --name ${CC_NAME} $PEER_CONN_PARMS --version ${CC_VERSION} --sequence ${CC_SEQUENCE} ${INIT_REQUIRED} ${CC_END_POLICY} ${CC_COLL_CONFIG} >&log.txt
+  res=$?
+  { set +x; } 2>/dev/null
+  cat log.txt
