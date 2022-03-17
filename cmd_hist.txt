@@ -1,0 +1,1000 @@
+  653  docker-compose
+  654  cd my-network/
+  655  ./network.sh up -ca
+  656  cd ..
+  657  curl -sSL https://bit.ly/2ysbOFE | bash -s -- 2.2.1 1.4.9
+  658  df -h
+  659  cd shahada2.0-hyperledeger-network/
+  660  rm -rf bin/
+  661  cd ..
+  662  cp -r fabric-samples/bin shahada2.0-hyperledeger-network/
+  663  cd shahada2.0-hyperledeger-network/
+  664  ls
+  665  ./network.sh up -ca
+  666  cd my-network/
+  667  ./network.sh up -ca
+  668  df -h
+  669  dokcer ps
+  670  docker ps
+  671  ./network.sh createChannel -c shchannel
+  672  docker ps
+  673  exit
+  674  cd shahada2.0-hyperledeger-network/
+  675  docker ps
+  676  git add .
+  677  git commit -m "generated"
+  678  git config --global user.email "sid.srivastava28@gmail.com"
+  679  git commit -m "generated"
+  680  git push
+  681  cd my-network/organizations/
+  682  ls
+  683  cd ..
+  684  ls
+  685  cd my-network/
+  686  ls
+  687  rm -rf .gitignore 
+  688  vi .gitignore 
+  689  cd ..
+  690  ls
+  691  pwd
+  692  git add .
+  693  git commit -m "gitIgnore edited"
+  694  git push
+  695  ls
+  696  DewaAiEV@2020
+  697  git push
+  698  ls
+  699  cat shahada2.0-hyperledeger-network/my-network/organizations/peerOrganizations/SNM.shahada.ae/connection-org1.json 
+  700  docker ps
+  701  docker logs 7abe4e57d505
+  702  docker ps
+  703  docker logs 7abe4e57d505
+  704  docker ps
+  705  docker logs 814c826ef0df
+  706  history
+  707  ./network.sh deploycc -ccl javascript
+  708  cd shahada2.0-hyperledeger-network/
+  709  cd my-network/
+  710  ./network.sh deploycc -ccl javascript
+  711  network.sh deployCC -ccn basic -ccl javascript
+  712  ./network.sh deployCC -ccn basic -ccl javascript
+  713  rm -rf scripts/deployCC.sh 
+  714  vi   scripts/deployCC.sh 
+  715  ./network.sh deployCC -ccn basic -ccl javascript
+  716  sudo chmod -R 777 scripts/
+  717  ./network.sh deployCC -ccn basic -ccl javascript
+  718  ./network.sh deployCC -ccn basic1 -ccl javascript
+  719  docker ps
+  720  ./network.sh deployCC -ccn ledger -ccl javascript
+  721  ./network.sh deployCC -ccn private -ccl javascript
+  722  ./network.sh deployCC -ccn basic -ccl typescript
+  723  ./network.sh deployCC -ccn basic -ccl typescript -c shchannel
+  724  cd shahada2.0-hyperledeger-network/my-network/
+  725  ./network.sh deployCC -ccn basic -ccl typescript -c shchannel -ccv 2.0
+  726  history
+  727  sudo vi /etc/nginx/sites-available/default 
+  728  history
+  729  sudo service nginx restart
+  730  pm2 logs
+  731  exit
+  732  certbot --force-renewal -d demo.emsat.shahada.ae
+  733  history
+  734  exit
+  735  docker ps
+  736  docker logs ca_SNM
+  737  ls
+  738  history
+  739  cd shahada2.0-hyperledeger-network/my-network/
+  740  ls
+  741  cd ..
+  742  ls
+  743  cd asset-transfer-basic/
+  744  ls
+  745  cd ..
+  746  vi asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+  747  vi asset-transfer-basic/chaincode-javascript/package.json 
+  748  docker ps
+  749  docker logs orderer.shahada.ae
+  750  ls
+  751  cd shahada2.0-hyperledeger-network/my-network/organizations/ordererOrganizations/
+  752  ls
+  753  cd shahada.ae/
+  754  ls
+  755  cd orderers/
+  756  ls
+  757  cd orderer.shahada.ae/
+  758  ls
+  759  cd msp/
+  760  ls
+  761  cd cacerts/
+  762  ls
+  763  cat localhost-9054-ca-orderer.pem 
+  764  cd shahada2.0-hyperledeger-network/
+  765  cd my-network/
+  766  ls
+  767  ./network.sh down
+  768  docker ps -aq
+  769  docker ps
+  770  docker rm $(docker stop $(docker ps -aq))
+  771  history
+  772  ./network.sh up -ca
+  773  docker rm $(docker stop $(docker ps -aq))
+  774  docker volume prunw
+  775  docker volume prune
+  776  docker network prune
+  777  cd organizations/
+  778  ls
+  779  rm -rf ordererOrganizations/ peerOrganizations/
+  780  cd fabric-ca/
+  781  ls
+  782  rm -rf SNM/ ordererOrg/
+  783  cd ..
+  784  cd system-genesis-block/
+  785  ls
+  786  cd ..
+  787  ls
+  788  cd organizations/
+  789  ls
+  790  cd fabric-ca/
+  791  ls
+  792  cd ..
+  793  ./network.sh up -ca
+  794  history
+  795  ls
+  796  cd organizations/
+  797  ls
+  798  cd ..
+  799  ls
+  800  cd ..
+  801  ls
+  802  cd my-network/organizations/
+  803  ls
+  804  cd ..
+  805  ./network.sh up -ca
+  806  ./network.sh createChannel -c shchannel
+  807  ./network.sh deployCC -ccn basic -ccl javascript -c shchannel
+  808  dokcer ps
+  809  docker ps
+  810  vi scripts/deployCC.sh 
+  811  ./network.sh deployCC -ccn basic -ccl javascript -c shchannel -ccv 2.0
+  812  cd shahada2.0-hyperledeger-network/
+  813  ./network.sh down
+  814  cd my-network/
+  815  ./network.sh down
+  816  docker rm $(docker stop $(docker ps -aq))
+  817  docker ps
+  818  docker images
+  819  vi scripts/deployCC.sh 
+  820  cd organizations/
+  821  ls
+  822  cd fabric-ca/
+  823  ls
+  824  rm -rh SNM/ ordererOrg/
+  825  rm -rf SNM/ ordererOrg/
+  826  cd ..
+  827  ls
+  828  cd system-genesis-block/
+  829  ls
+  830  cd ..
+  831  ./network.sh up -ca
+  832  ./network.sh createChannel -c shchannel
+  833  docker ps
+  834  ./network.sh down
+  835  ls
+  836  cd organizations/
+  837  ls
+  838  cd fabric-ca/
+  839  rm -rf SNM/ ordererOrg/
+  840  ls
+  841  cd ..
+  842  ls
+  843  cd system-genesis-block/
+  844  ls
+  845  cd ..
+  846  docker rm $(docker stop $(docker ps -aq)) && docker volume prune
+  847  docker ps -aq
+  848  ./network.sh up -ca
+  849  ./network.sh createChannel -c shchannel
+  850  ./network.sh deployCC -ccn basic -ccl javascript -c shchannel
+  851  docker ps
+  852  docker logs orderer.shahada.ae
+  853  vi scripts/deployCC.sh 
+  854  ./network.sh deployCC -ccn basic -ccl javascript -c shchannel
+  855  vi scripts/deployCC.sh 
+  856  cat scripts/envVar.sh 
+  857  vi scripts/deployCC.sh 
+  858  ./network.sh deployCC -ccn basic -ccl javascript -c shchannel
+  859  docker ps
+  860  cd shahada2.0-hyperledeger-network/
+  861  ls
+  862  cd my-network/
+  863  ls
+  864  cat organizations/peerOrganizations/SNM.shahada.ae/connection-org1.json 
+  865  docker ps
+  866  docker logs 6c1c938c76da
+  867  docker ps
+  868  docker logs           peer0.SNM.shahada.ae
+  869  docker logs           orderer.shahada.ae
+  870  docker logs           peer0.SNM.shahada.ae
+  871  cd shahada2.0-hyperledeger-network/my-network/organizations/ordererOrganizations/shahada.ae/
+  872  ls
+  873  cd orderers/orderer.shahada.ae/
+  874  ls
+  875  cd msp/
+  876  ls
+  877  cd cacerts/
+  878  ls
+  879  cat lo
+  880  cat localhost-9054-ca-orderer.pem 
+  881  docker logs           peer0.SNM.shahada.ae
+  882  docker logs           orderer.shahada.ae
+  883  cd
+  884  cd shahada2.0-hyperledeger-network/my-network/organizations/peerOrganizations/SNM.shahada.ae/
+  885  ls
+  886  cat connection-org1.yaml 
+  887  docker logs           peer0.SNM.shahada.ae
+  888  docker ps
+  889  docker logs 6c1c938c76da
+  890  cat shahada2.0-hyperledeger-network/asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+  891  docker logs 6c1c938c76da
+  892  cd shahada2.0-hyperledeger-network/
+  893  cd my-network/
+  894  vi scripts/deployCC.sh 
+  895  ls
+  896  cd ..
+  897  vi asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+  898  cd my-network/
+  899  ./network.sh down
+  900  history
+  901  docker rm $(docker stop $(docker ps -aq)) && docker volume prune
+  902  docker ps -aq
+  903  cd organizations/
+  904  ls
+  905  cd ..
+  906  ls
+  907  ./network.sh up -ca && ./network.sh createChannel -c shchannel && ./network.sh deployCC -ccn basic -ccl javascript -c shchannel
+  908  cd system-genesis-block/
+  909  ls
+  910  cd ..
+  911  docker rm $(docker stop $(docker ps -aq)) && docker volume prune
+  912  cd organizations/
+  913  ls
+  914  cd fabric-ca/
+  915  ls
+  916  rm -rf SNM/ ordererOrg/
+  917  cd ..
+  918  ls
+  919  rm -rf ordererOrganizations/ peerOrganizations/
+  920  ls
+  921  cd ..
+  922  ls
+  923  cd system-genesis-block/
+  924  ls
+  925  cd ..
+  926  ls
+  927  ./network.sh up -ca && ./network.sh createChannel -c shchannel && ./network.sh deployCC -ccn basic -ccl javascript -c shchannel
+  928  cd shahada2.0-hyperledeger-network/my-network/
+  929  ls
+  930  cat organizations/peerOrganizations/SNM.shahada.ae/connection-org1.json 
+  931  docker ps
+  932  docker logs peer0.SNM.shahada.ae
+  933  cat organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/msp/cacerts/localhost-9054-ca-orderer.pem 
+  934  docker logs peer0.SNM.shahada.ae
+  935  docker ps
+  936  docker logs ed1c6321a7f6
+  937  docker logs peer0.SNM.shahada.ae -f
+  938  cd shahada2.0-hyperledeger-network/
+  939  vi asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+  940  cd my-network/
+  941  ./network.sh deployCC -ccn basic -ccl javascript -c shchannel -ccv 2.0
+  942  ./network.sh deployCC -ccn basic -ccl javascript -c shchannel -ccv 2.0 -ccs 2
+  943  ./network.sh deployCC -ccn basic -ccl javascript -c shchannel -ccv 3.0 -ccs 3
+  944  ./network.sh deployCC -ccn basic1 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+  945  docker ps
+  946  docker logs 38102e83b0aa
+  947  cd shahada2.0-hyperledeger-network/
+  948  vi asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+  949  cd my-network/
+  950  ./network.sh deployCC -ccn basic2 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+  951  docker ps
+  952  docker logs a1d63affb214
+  953  vi asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+  954  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+  955  ./network.sh deployCC -ccn basic3 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+  956  docker ps
+  957  docker logs 7b1c15f95407
+  958  docker ps
+  959  docker logs 7b1c15f95407
+  960  cd shahada2.0-hyperledeger-network/
+  961  cd my
+  962  cd my-network/
+  963  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+  964  ./network.sh deployCC -ccn basic4 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+  965  docker ps
+  966  docker logs 3fa3fa6df9fa
+  967  cd shahada2.0-hyperledeger-network/my-network/
+  968  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+  969  docker ps
+  970  docker stop 3fa3fa6df9fa 7b1c15f95407 a1d63affb214 38102e83b0aa ed1c6321a7f6
+  971  docker rm  3fa3fa6df9fa 7b1c15f95407 a1d63affb214 38102e83b0aa ed1c6321a7f6
+  972  ./network.sh deployCC -ccn basic5 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+  973  docker ps
+  974  docker images
+  975  docker ps
+  976  docker ps -aq
+  977  docker logs 19fd0d34f292
+  978  cd shahada2.0-hyperledeger-network/my-network/
+  979  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+  980  ./network.sh deployCC -ccn basic6 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+  981  docker ps 
+  982  docker logs 117bec21c0b9
+  983  docker logs 117bec21c0b9 -f
+  984  cd shahada2.0-hyperledeger-network/my-network/
+  985  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+  986  ./network.sh deployCC -ccn basic7 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+  987  docker ps 
+  988  docker logs 778d688965bc
+  989  cd shahada2.0-hyperledeger-network/my-network/
+  990  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+  991  ./network.sh deployCC -ccn basic8 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+  992  docker ps 
+  993  cd shahada2.0-hyperledeger-network/my-network/
+  994  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+  995  ./network.sh deployCC -ccn basic9 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+  996  docker ps
+  997  docker logs 4c01194090eb -f
+  998  cd shahada2.0-hyperledeger-network/my-network/
+  999  docker ps
+ 1000  docker stop 4c01194090eb 90060f8ccbe6 778d688965bc 117bec21c0b9
+ 1001  docker rm 4c01194090eb 90060f8ccbe6 778d688965bc 117bec21c0b9
+ 1002  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+ 1003  ./network.sh deployCC -ccn basic10 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+ 1004  docker ps
+ 1005  docker logs 3722d1209963 -f
+ 1006  docker ps
+ 1007  docker logs peer0.SNM.shahada.ae
+ 1008  docker logs peer0.SNM.shahada.ae -f
+ 1009  docker logs peer0.SNM.shahada.ae
+ 1010  docker logs ca_SNM
+ 1011  docker logs ca_SNM -f
+ 1012  cd shahada2.0-hyperledeger-network/my-network/
+ 1013  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+ 1014  docker ps
+ 1015  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+ 1016  ./network.sh deployCC -ccn basic11 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+ 1017  cd shahada2.0-hyperledeger-network/my-network/
+ 1018  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+ 1019  ./network.sh deployCC -ccn basic12 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+ 1020  docker ps
+ 1021  docker logs peer0.SNM.shahada.ae
+ 1022  docker ps
+ 1023  docker logs peer0.SNM.shahada.ae
+ 1024  docker ps
+ 1025  docker logs 366622168d66
+ 1026  cd shahada2.0-hyperledeger-network/my-network/
+ 1027  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+ 1028  ./network.sh deployCC -ccn basic13 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+ 1029  docker logs peer0.SNM.shahada.ae
+ 1030  docker logs peer0.SNM.shahada.ae -f
+ 1031  cd shahada2.0-hyperledeger-network/my-network/
+ 1032  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+ 1033  ./network.sh deployCC -ccn basic14 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+ 1034  docker ps
+ 1035  docker logs 77411781946a
+ 1036  cd shahada2.0-hyperledeger-network/my-network/
+ 1037  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+ 1038  ./network.sh deployCC -ccn basic15 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+ 1039  cd shahada2.0-hyperledeger-network/my-network/
+ 1040  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+ 1041  docker ps
+ 1042  docker rm 68b65d680716 77411781946a
+ 1043  docker stop 68b65d680716 77411781946a
+ 1044  docker rm 68b65d680716 77411781946a
+ 1045  ./network.sh deployCC -ccn basic16 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+ 1046  docker ps
+ 1047  docker logs 816e7bf5ae10
+ 1048  cd shahada2.0-hyperledeger-network/my-network/
+ 1049  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+ 1050  ./network.sh deployCC -ccn basic17 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+ 1051  dokcer ps
+ 1052  docker ps
+ 1053  docker logs 9c4312d45a27
+ 1054  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+ 1055  docker ps
+ 1056  docker stop 9c4312d45a27 816e7bf5ae10
+ 1057  docker rm 9c4312d45a27 816e7bf5ae10
+ 1058  ./network.sh deployCC -ccn basic18 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+ 1059  docker ps
+ 1060  docker logs 322d3c15222c
+ 1061  vi ../asset-transfer-basic/chaincode-javascript/lib/assetTransfer.js 
+ 1062  ./network.sh deployCC -ccn basic19 -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../asset-transfer-basic/chaincode-javascript/
+ 1063  docker ps
+ 1064  cd shahada2.0-hyperledeger-network/
+ 1065  ls
+ 1066  mkdir token-chaincode
+ 1067  cd token-chaincode/
+ 1068  mkdir lib
+ 1069  cd lib/
+ 1070  ls
+ 1071  vi tokenERC20.js
+ 1072  cd ..
+ 1073  vi index.js
+ 1074  vi package.json
+ 1075  ls
+ 1076  vi index.js 
+ 1077  ls
+ 1078  cd ..
+ 1079  cd my-network/
+ 1080  ls
+ 1081  ./network.sh deployCC -ccn tokencc -ccl javascript -c shchannel -ccv 1.0 -ccs 1 -ccp ../token-chaincode/
+ 1082  docker ps
+ 1083  docker logs 3ee8086cae3f -f
+ 1084  ls
+ 1085  cd ..
+ 1086  exit
+ 1087  ping mobile.shahada.ae
+ 1088  pm2 logs
+ 1089  pm2 list
+ 1090  docker ps
+ 1091  ls
+ 1092  pm2 describe server
+ 1093  ping mobile.shahada.ae
+ 1094  ls
+ 1095  docker ps
+ 1096  vi ~/.ssh/authorized_keys 
+ 1097  ls
+ 1098  exit
+ 1099  ls -lrt
+ 1100  docker ps
+ 1101  exit
+ 1102  ls
+ 1103  cd emsatat/
+ 1104  ls
+ 1105  cd emstat-moe/
+ 1106  ls
+ 1107  exit
+ 1108  ls -lrt
+ 1109  mkdir rasa_ded_bot
+ 1110  cd rasa_ded_bot/
+ 1111  ls -lrt
+ 1112  python3 --version
+ 1113  pip3 --version
+ 1114  apt install python3-pip
+ 1115  pip3 --version
+ 1116  clear
+ 1117  uname -h
+ 1118  uname --help
+ 1119  uname -a
+ 1120  sudo apt update
+ 1121  pip3 --version
+ 1122  python3 -m venv ./venv
+ 1123  source ./venv/bin/activate
+ 1124  pip3 install -U pip
+ 1125  pip3 install rasa
+ 1126  clear
+ 1127  rasa -h
+ 1128  ls -lrt
+ 1129  source ./venv/bin/activate
+ 1130  pip3 install rasa
+ 1131  rasa -h
+ 1132  deactivate
+ 1133  ls -lrt
+ 1134  rasa -h
+ 1135  source ./venv/bin/activate
+ 1136  pip3 install -no-cache-dir rasa
+ 1137  pip3 install -h
+ 1138  pip3 install --no-cache-dir rasa
+ 1139  rasa -h
+ 1140  rasa --version
+ 1141  pip3 install --no-cache-dir rasa==2.3.1
+ 1142  pip3 uninstall --no-cache-dir rasa
+ 1143  rasa -h
+ 1144  pip3 install --no-cache-dir rasa==2.3.1
+ 1145  ls -lrt
+ 1146  rasa -h
+ 1147  clear
+ 1148  rasa --version
+ 1149  ls -lrt
+ 1150  df -g
+ 1151  df -u
+ 1152  df
+ 1153  rasa init
+ 1154  ls -lrt
+ 1155  cd ded_bot/
+ 1156  ls -lrt
+ 1157  cd data/
+ 1158  ls -lrt
+ 1159  vi nlu.yml 
+ 1160  ls -lrt
+ 1161  cd ,..
+ 1162  ls -lrt
+ 1163  cd ..
+ 1164  ls -lrt
+ 1165  vi domain.yml 
+ 1166  touch domain.yml 
+ 1167  vi domain.yml 
+ 1168  >domain.yml 
+ 1169  vi domain.yml 
+ 1170  cd data/
+ 1171  vi stories.yml 
+ 1172  vi rules.yml 
+ 1173  vi nlu.yml 
+ 1174  >nlu.yml 
+ 1175  vi nlu.yml 
+ 1176  cd ..
+ 1177  ls -lrt
+ 1178  vi config.yml 
+ 1179  ls -lrt
+ 1180  ls -lart
+ 1181  ls -lurt
+ 1182  cd actions/
+ 1183  ls -lrt
+ 1184  vi actions.py 
+ 1185  cd ..
+ 1186  ls-lrt
+ 1187  ls -lrt
+ 1188  rasa train
+ 1189  ls -lrt
+ 1190  cd data
+ 1191  ls -lrt
+ 1192  vi rules.yml 
+ 1193  cd ..
+ 1194  ls -lrt
+ 1195  rasa train
+ 1196  ls -lrt
+ 1197  cd  data/
+ 1198  ls -lrt
+ 1199  vi rules.yml 
+ 1200  cd ../
+ 1201  ls -lrt
+ 1202  rasa train
+ 1203  ls -lrt
+ 1204  vi endpoints.yml 
+ 1205  vi credentials.yml 
+ 1206  rasa run -h
+ 1207  rasa run -m models/ -enable-api --cors "*"
+ 1208  rasa run -m models/ --enable-api --cors "*"
+ 1209  pwd
+ 1210  rasa run -m models/ --enable-api --cors "*"
+ 1211  ls -lrt
+ 1212  cd ..
+ 1213  ls -lrt
+ 1214  pwd
+ 1215  deactivate
+ 1216  clear
+ 1217  df 
+ 1218  exit
+ 1219  ls -lrt
+ 1220  cd rasa_ded_bot/
+ 1221  ls -lrt
+ 1222  source venv/bin/activate
+ 1223  ls -lrt
+ 1224  clear
+ 1225  ls -lrt
+ 1226  cd ded_bot/
+ 1227  ls -lrt
+ 1228  rasa run -m models/ --enable-api --cors "*"
+ 1229  ls -lrt
+ 1230  vi credentials.yml 
+ 1231  vi endpoints.yml 
+ 1232  rasa run -m models/ --enable-api --cors "*"
+ 1233  ls -lrt
+ 1234  cd rasa_ded_bot/
+ 1235  ls -lrt
+ 1236  source venv/bin/activate
+ 1237  cd ded_bot/
+ 1238  ls -lrt
+ 1239  rasa run -m models/ --enable-api --cors "*"
+ 1240  deactivate
+ 1241  ls -rlt
+ 1242  cd rasa_ded_bot/
+ 1243  ls -lrt
+ 1244  source venv/bin/activate
+ 1245  ls- lrt
+ 1246  rasa run -m models/ --enable-api --cors "*"
+ 1247  ls -rlt
+ 1248  cd ded_bot/
+ 1249  ls -lrt
+ 1250  rasa run -m models/ --enable-api --cors "*"
+ 1251  ls -lrt
+ 1252  cd rasa_ded_bot/
+ 1253  ls -lrt
+ 1254  source venv/bin/activate
+ 1255  ls -lrt
+ 1256  cd ded_bot/
+ 1257  ls -lrt
+ 1258  ls -lart
+ 1259  vi .ssh/
+ 1260  vi .ssh/authorized_keys 
+ 1261  ls
+ 1262  mkdir chatbot-ui
+ 1263  ls
+ 1264  cd chatbot-ui/
+ 1265  git clone https://github.com/grapetech-dev/chatbot-ui.git
+ 1266  ls
+ 1267  cd chatbot-ui/
+ 1268  npm run build
+ 1269  npm i
+ 1270  git pull
+ 1271  npm run build
+ 1272  cd chatbot-ui/
+ 1273  ls
+ 1274  cd chatbot-ui/
+ 1275  ld
+ 1276  ls
+ 1277  cd build
+ 1278  ls
+ 1279  cd..
+ 1280  cd ..
+ 1281  rm build/
+ 1282  rmdir build/
+ 1283  rm -rf build/
+ 1284  ls
+ 1285  npm run build
+ 1286  ls
+ 1287  cd chatbot-ui/
+ 1288  clear
+ 1289  ls
+ 1290  cd chatbot-ui/
+ 1291  clear
+ 1292  ls
+ 1293  npm run build
+ 1294  npm start
+ 1295  clear
+ 1296  ls
+ 1297  rm -rf chatbot-ui/
+ 1298  ls
+ 1299  git clone https://github.com/grapetech-dev/chatbot-ui.git
+ 1300  ls
+ 1301  docker build . -t chatbot_ui
+ 1302  cd chatbot-ui/
+ 1303  docker build . -t chatbot_ui
+ 1304  cd chatbot-ui/
+ 1305  docker ps
+ 1306  clear
+ 1307  docker build . -t chatbot_ui
+ 1308  git pull
+ 1309  docker build . -t chatbot_ui
+ 1310  docker run -p 3000:3000 chatbot-ui     
+ 1311  docker run -p 3000:3000 chatbot_ui
+ 1312  ls
+ 1313  clear
+ 1314  docker ps
+ 1315  clear
+ 1316  free -m
+ 1317  docker ps
+ 1318  clear
+ 1319  ps aux
+ 1320  clear
+ 1321  ps aux
+ 1322  clear
+ 1323  free -m
+ 1324  clear
+ 1325  socker ps
+ 1326  docker ps
+ 1327  ssh 142.93.216.53
+ 1328  ls -lrt
+ 1329  docker ps
+ 1330  docker logs ee542d35de03
+ 1331  clear
+ 1332  docker ps
+ 1333  exit
+ 1334  ls
+ 1335  cd emsatat/
+ 1336  ls
+ 1337  cd emstat-moe/
+ 1338  ls
+ 1339  cd models/
+ 1340  cd ..
+ 1341  cd moe-demp
+ 1342  cd moe-demo
+ 1343  cd ..
+ 1344  cd moe-demo/
+ 1345  ls
+ 1346  cd ..
+ 1347  docker ps
+ 1348  exit
+ 1349  ls -lrt
+ 1350  dpcker ps
+ 1351  docker ps
+ 1352  ls -lrt
+ 1353  cd emsatat/
+ 1354  ls -lrt
+ 1355  cd emstat-moe/
+ 1356  ls- lrt
+ 1357  ls -lrt
+ 1358  cd ..
+ 1359  ls -lrt
+ 1360  cd ..
+ 1361  ls -lrt
+ 1362  cd moe-demo/
+ 1363  ls -lrt
+ 1364  cd ..
+ 1365  ls -lrt
+ 1366  exit
+ 1367  ls
+ 1368  cd emsatat/
+ 1369  ls
+ 1370  cd emstat-moe/
+ 1371  ls
+ 1372  npm i
+ 1373  node loadAdmin.js
+ 1374  node --v
+ 1375  node -v
+ 1376  ls
+ 1377  cd emsatat/
+ 1378  ls
+ 1379  cd emstat-moe/
+ 1380  ls
+ 1381  vi loadAdmin.js 
+ 1382  pm2 list
+ 1383  pm2 logs -h
+ 1384  pm2 logs 0
+ 1385  cd ~
+ 1386  ls
+ 1387  pm2 
+ 1388  pm2 logs 0
+ 1389  clear
+ 1390  mongod --version
+ 1391  db.version()
+ 1392  mongo --version
+ 1393  clear
+ 1394  docker ps
+ 1395  clear
+ 1396  ls -lrt
+ 1397  exit
+ 1398  ls
+ 1399  cd emsatat/
+ 1400  ls
+ 1401  docker ps
+ 1402  exir
+ 1403  exit
+ 1404  ls -lrt
+ 1405  ls -lart
+ 1406  vi .ssh/
+ 1407  cd .ssh/
+ 1408  ls -lrt
+ 1409  cvi authorized_keys 
+ 1410  vi authorized_keys 
+ 1411  docker ps
+ 1412  exit 
+ 1413  l s-lrt
+ 1414  ls -lrt
+ 1415  docker ps
+ 1416  docker image ls
+ 1417  cd /etc/nginx/
+ 1418  ls -lrt
+ 1419  ci conf.d/
+ 1420  cd conf.d/
+ 1421  ls -lrt
+ 1422  cd ../
+ 1423  ls -lrt
+ 1424  cd sites-available/
+ 1425  ls -lrt
+ 1426  cd de
+ 1427  vi default 
+ 1428  cd ..
+ 1429  ls -lrt
+ 1430  cd sites-available/
+ 1431  ls -lrt
+ 1432  vi default 
+ 1433  cd ..
+ 1434  ls -lrt
+ 1435  cd sites-enabled/
+ 1436  ls -lrt
+ 1437  vi default 
+ 1438  cd ..
+ 1439  ls -olrt
+ 1440  ls -lrt
+ 1441  cd sites-available/
+ 1442  ls -lrt
+ 1443  vi default 
+ 1444  clear
+ 1445  docker ps
+ 1446  ls -lrt
+ 1447  python --version
+ 1448  docker ps
+ 1449  cd /etc/nginx/
+ 1450  ls -lrt
+ 1451  cd sites-
+ 1452  cd sites-available/
+ 1453  ls -lrt
+ 1454  vi default 
+ 1455  cd /etc/letsencrypt/live/
+ 1456  ls -lrt
+ 1457  clear
+ 1458  ls -lrt
+ 1459  cd /etc/
+ 1460  ls -lrt
+ 1461  cdletsencrypt
+ 1462  cd letsencrypt
+ 1463  ls -lrt
+ 1464  pwd
+ 1465  docker ps
+ 1466  ls -lrt
+ 1467  cd moe-demo/
+ 1468  ls -lrt
+ 1469  vi README.md 
+ 1470  cd ..
+ 1471  ls -lrt
+ 1472  cd emsatat/
+ 1473  ls -lrt
+ 1474  cd emstat-moe/
+ 1475  ls -lrt
+ 1476  pm2 status
+ 1477  vi server.js 
+ 1478  cd config/
+ 1479  ls -lrt
+ 1480  vi config.dev.json config.prod.json 
+ 1481  cd ../
+ 1482  ls -lrt
+ 1483  cd routes/
+ 1484  ls -lrt
+ 1485  vi certificate.js 
+ 1486  ls -lrt
+ 1487  docker ps
+ 1488  pm2 status
+ 1489  pm2 logs server
+ 1490  ls -lrt
+ 1491  cd snap
+ 1492  ls -lrt
+ 1493  cd ..
+ 1494  ls -lrt
+ 1495  cd emsatat/emstat-moe/
+ 1496  ls -lrt
+ 1497  vi loadAdmin.js 
+ 1498  vi README.md 
+ 1499  ls -lrt
+ 1500  ng serve
+ 1501  npm start
+ 1502  pm2 status
+ 1503  pm2 logs server
+ 1504  pm2 logs server --100
+ 1505  pm2 logs server --lines 100
+ 1506  pm2 logs --help
+ 1507  pm2 logs server --lines 1000
+ 1508  clear
+ 1509  ls -lrt
+ 1510  pm2 logs
+ 1511  docker ps
+ 1512  cd /etc/nginx/
+ 1513  ls -lrt
+ 1514  cd sites-
+ 1515  cd sites-available/
+ 1516  ls -lrt
+ 1517  vi default 
+ 1518  pm2 status
+ 1519  exit
+ 1520  ls -lrt
+ 1521  cd emsatat
+ 1522  ls -lrt
+ 1523  cd emstat-moe/
+ 1524  ls -lrt
+ 1525  cd ../..
+ 1526  ls -lrt
+ 1527  exit
+ 1528  l s-lrt
+ 1529  ls -lrt
+ 1530  cd chatbot-ui/
+ 1531  ls -lrt
+ 1532  exit
+ 1533  ls
+ 1534  pm2 list
+ 1535  docker ps
+ 1536  ls
+ 1537  history
+ 1538  ls
+ 1539  cd chatbot-ui/
+ 1540  ls
+ 1541  cd public/
+ 1542  ls
+ 1543  cd ..
+ 1544  npm run build
+ 1545  npm start
+ 1546  ls
+ 1547  cd ..
+ 1548  ls
+ 1549  ls -lrt
+ 1550  pm2 lis
+ 1551  pm2 list
+ 1552  exi
+ 1553  exit
+ 1554  ls -lrt
+ 1555  docker ps
+ 1556  docker logs ee542d35de03 
+ 1557  docker logs ee542d35de03 -f
+ 1558  clear
+ 1559  docker ps
+ 1560  ls -lrt
+ 1561  docker logs ee542d35de03 -f
+ 1562  clear
+ 1563  ls -lrt
+ 1564  cd shahada2.0-hyperledeger-network/
+ 1565  ls -lrt
+ 1566  cd bin/
+ 1567  ls -lrt
+ 1568  cd ..
+ 1569  ls -lrt
+ 1570  docker ps
+ 1571  ls -lrt
+ 1572  cd ..
+ 1573  ls -lrt
+ 1574  cd
+ 1575  ls -lrt
+ 1576  ls -lart
+ 1577  ls -lrt
+ 1578  cd 
+ 1579  ls -lart
+ 1580  cd .cache/
+ 1581  ls -lrt
+ 1582  cd ..
+ 1583  ls -lart
+ 1584  cd .ssh/
+ 1585  ls -lrt
+ 1586  vi authorized_keys 
+ 1587  ls -lrt
+ 1588  cd shahada2.0-hyperledeger-network/
+ 1589  ls -lrt
+ 1590  cd my-network/
+ 1591  ls -lrt
+ 1592  vi network.sh 
+ 1593  history
+ 1594  docker ps
+ 1595  docker logs e3f33781a48d
+ 1596  clear
+ 1597  docker ps
+ 1598  docker logs ee542d35de03
+ 1599  docker ps
+ 1600  ls -lrt
+ 1601  vi README.md 
+ 1602  vi network.sh 
+ 1603  cat README.md 
+ 1604  ./network.sh down
+ 1605  clear
+ 1606  cat README.md 
+ 1607  vi network.sh 
+ 1608  docker ps
+ 1609  docker ps -a
+ 1610  clear
+ 1611  ls -lrt
+ 1612  cd organizations/
+ 1613  ls -lrt
+ 1614  cd ..
+ 1615  ls -lrt
+ 1616  cd scripts/
+ 1617  ls -lrt
+ 1618  cd ../
+ 1619  ls -lrt
+ 1620  docker ps
+ 1621  docker logs ee542d35de03
+ 1622  ls -lrt
+ 1623  vi network.sh 
+ 1624  cat README.md 
+ 1625  ./network.sh down
+ 1626  ls -lrt
+ 1627  cd docker/
+ 1628  ls -lrt
+ 1629  vi docker-compose-test-net.yaml 
+ 1630  cd ..
+ 1631  ls -lrt
+ 1632  cd ..
+ 1633  cd -
+ 1634  ls -lrt
+ 1635  cd token-chaincode/
+ 1636  ls -lrt
+ 1637  cd ../bin/
+ 1638  ls -lrt
+ 1639  cd ../asset-transfer-basic/
+ 1640  ls -lrt
+ 1641  cd ../
+ 1642  cd ..
+ 1643  ls -lrt
+ 1644  cd moe-demo/
+ 1645  ls -lrt
+ 1646  cd ..
+ 1647  ls -lrt
+ 1648  history
+ 1649  docker ps
+ 1650  ls -lrt
+ 1651  cd shahada2.0-hyperledeger-network/
+ 1652  history >>cmd_hist.txt

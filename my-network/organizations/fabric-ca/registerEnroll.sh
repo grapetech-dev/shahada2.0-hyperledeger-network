@@ -5,96 +5,186 @@ source scriptUtils.sh
 function createOrg1() {
 
   infoln "Enroll the CA admin"
-  mkdir -p organizations/peerOrganizations/SNM.shahada.ae/
+  mkdir -p organizations/peerOrganizations/org1.shahada.ae/
 
-  export FABRIC_CA_CLIENT_HOME=${PWD}/organizations/peerOrganizations/SNM.shahada.ae/
+  export FABRIC_CA_CLIENT_HOME=${PWD}/organizations/peerOrganizations/org1.shahada.ae/
   #  rm -rf $FABRIC_CA_CLIENT_HOME/fabric-ca-client-config.yaml
   #  rm -rf $FABRIC_CA_CLIENT_HOME/msp
 
   set -x
-  fabric-ca-client enroll -u https://admin:adminpw@localhost:7054 --caname ca-SNM --tls.certfiles ${PWD}/organizations/fabric-ca/SNM/tls-cert.pem
+  fabric-ca-client enroll -u https://admin:adminpw@localhost:7054 --caname ca-org1 --tls.certfiles ${PWD}/organizations/fabric-ca/org1/tls-cert.pem
   { set +x; } 2>/dev/null
 
   echo 'NodeOUs:
   Enable: true
   ClientOUIdentifier:
-    Certificate: cacerts/localhost-7054-ca-SNM.pem
+    Certificate: cacerts/localhost-7054-ca-org1.pem
     OrganizationalUnitIdentifier: client
   PeerOUIdentifier:
-    Certificate: cacerts/localhost-7054-ca-SNM.pem
+    Certificate: cacerts/localhost-7054-ca-org1.pem
     OrganizationalUnitIdentifier: peer
   AdminOUIdentifier:
-    Certificate: cacerts/localhost-7054-ca-SNM.pem
+    Certificate: cacerts/localhost-7054-ca-org1.pem
     OrganizationalUnitIdentifier: admin
   OrdererOUIdentifier:
-    Certificate: cacerts/localhost-7054-ca-SNM.pem
-    OrganizationalUnitIdentifier: orderer' >${PWD}/organizations/peerOrganizations/SNM.shahada.ae/msp/config.yaml
+    Certificate: cacerts/localhost-7054-ca-org1.pem
+    OrganizationalUnitIdentifier: orderer' >${PWD}/organizations/peerOrganizations/org1.shahada.ae/msp/config.yaml
 
   infoln "Register peer0"
   set -x
-  fabric-ca-client register --caname ca-SNM --id.name peer0 --id.secret peer0pw --id.type peer --tls.certfiles ${PWD}/organizations/fabric-ca/SNM/tls-cert.pem
+  fabric-ca-client register --caname ca-org1 --id.name peer0 --id.secret peer0pw --id.type peer --tls.certfiles ${PWD}/organizations/fabric-ca/org1/tls-cert.pem
   { set +x; } 2>/dev/null
 
   infoln "Register user"
   set -x
-  fabric-ca-client register --caname ca-SNM --id.name user1 --id.secret user1pw --id.type client --tls.certfiles ${PWD}/organizations/fabric-ca/SNM/tls-cert.pem
+  fabric-ca-client register --caname ca-org1 --id.name user1 --id.secret user1pw --id.type client --tls.certfiles ${PWD}/organizations/fabric-ca/org1/tls-cert.pem
   { set +x; } 2>/dev/null
 
   infoln "Register the org admin"
   set -x
-  fabric-ca-client register --caname ca-SNM --id.name SNMadmin --id.secret SNMadminpw --id.type admin --tls.certfiles ${PWD}/organizations/fabric-ca/SNM/tls-cert.pem
+  fabric-ca-client register --caname ca-org1 --id.name org1admin --id.secret org1adminpw --id.type admin --tls.certfiles ${PWD}/organizations/fabric-ca/org1/tls-cert.pem
   { set +x; } 2>/dev/null
 
-  mkdir -p organizations/peerOrganizations/SNM.shahada.ae/peers
-  mkdir -p organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae
+  mkdir -p organizations/peerOrganizations/org1.shahada.ae/peers
+  mkdir -p organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae
 
   infoln "Generate the peer0 msp"
   set -x
-  fabric-ca-client enroll -u https://peer0:peer0pw@localhost:7054 --caname ca-SNM -M ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/msp --csr.hosts peer0.SNM.shahada.ae --tls.certfiles ${PWD}/organizations/fabric-ca/SNM/tls-cert.pem
+  fabric-ca-client enroll -u https://peer0:peer0pw@localhost:7054 --caname ca-org1 -M ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/msp --csr.hosts peer0.org1.shahada.ae --tls.certfiles ${PWD}/organizations/fabric-ca/org1/tls-cert.pem
   { set +x; } 2>/dev/null
 
-  cp ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/msp/config.yaml ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/msp/config.yaml
+  cp ${PWD}/organizations/peerOrganizations/org1.shahada.ae/msp/config.yaml ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/msp/config.yaml
 
   infoln "Generate the peer0-tls certificates"
   set -x
-  fabric-ca-client enroll -u https://peer0:peer0pw@localhost:7054 --caname ca-SNM -M ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls --enrollment.profile tls --csr.hosts peer0.SNM.shahada.ae --csr.hosts localhost --tls.certfiles ${PWD}/organizations/fabric-ca/SNM/tls-cert.pem
+  fabric-ca-client enroll -u https://peer0:peer0pw@localhost:7054 --caname ca-org1 -M ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/tls --enrollment.profile tls --csr.hosts peer0.org1.shahada.ae --csr.hosts localhost --tls.certfiles ${PWD}/organizations/fabric-ca/org1/tls-cert.pem
   { set +x; } 2>/dev/null
 
-  cp ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/ca.crt
-  cp ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/signcerts/* ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/server.crt
-  cp ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/keystore/* ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/server.key
+  cp ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/tls/ca.crt
+  cp ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/tls/signcerts/* ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/tls/server.crt
+  cp ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/tls/keystore/* ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/tls/server.key
 
-  mkdir -p ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/msp/tlscacerts
-  cp ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/msp/tlscacerts/ca.crt
+  mkdir -p ${PWD}/organizations/peerOrganizations/org1.shahada.ae/msp/tlscacerts
+  cp ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/peerOrganizations/org1.shahada.ae/msp/tlscacerts/ca.crt
 
-  mkdir -p ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/tlsca
-  cp ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/tlsca/tlsca.SNM.shahada.ae-cert.pem
+  mkdir -p ${PWD}/organizations/peerOrganizations/org1.shahada.ae/tlsca
+  cp ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/peerOrganizations/org1.shahada.ae/tlsca/tlsca.org1.shahada.ae-cert.pem
 
-  mkdir -p ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/ca
-  cp ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/peers/peer0.SNM.shahada.ae/msp/cacerts/* ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/ca/ca.SNM.shahada.ae-cert.pem
+  mkdir -p ${PWD}/organizations/peerOrganizations/org1.shahada.ae/ca
+  cp ${PWD}/organizations/peerOrganizations/org1.shahada.ae/peers/peer0.org1.shahada.ae/msp/cacerts/* ${PWD}/organizations/peerOrganizations/org1.shahada.ae/ca/ca.org1.shahada.ae-cert.pem
 
-  mkdir -p organizations/peerOrganizations/SNM.shahada.ae/users
-  mkdir -p organizations/peerOrganizations/SNM.shahada.ae/users/User1@SNM.shahada.ae
+  mkdir -p organizations/peerOrganizations/org1.shahada.ae/users
+  mkdir -p organizations/peerOrganizations/org1.shahada.ae/users/User1@org1.shahada.ae
 
   infoln "Generate the user msp"
   set -x
-  fabric-ca-client enroll -u https://user1:user1pw@localhost:7054 --caname ca-SNM -M ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/users/User1@SNM.shahada.ae/msp --tls.certfiles ${PWD}/organizations/fabric-ca/SNM/tls-cert.pem
+  fabric-ca-client enroll -u https://user1:user1pw@localhost:7054 --caname ca-org1 -M ${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/User1@org1.shahada.ae/msp --tls.certfiles ${PWD}/organizations/fabric-ca/org1/tls-cert.pem
   { set +x; } 2>/dev/null
 
-  cp ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/msp/config.yaml ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/users/User1@SNM.shahada.ae/msp/config.yaml
+  cp ${PWD}/organizations/peerOrganizations/org1.shahada.ae/msp/config.yaml ${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/User1@org1.shahada.ae/msp/config.yaml
 
-  mkdir -p organizations/peerOrganizations/SNM.shahada.ae/users/Admin@SNM.shahada.ae
+  mkdir -p organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae
 
   infoln "Generate the org admin msp"
   set -x
-  fabric-ca-client enroll -u https://SNMadmin:SNMadminpw@localhost:7054 --caname ca-SNM -M ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/users/Admin@SNM.shahada.ae/msp --tls.certfiles ${PWD}/organizations/fabric-ca/SNM/tls-cert.pem
+  fabric-ca-client enroll -u https://org1admin:org1adminpw@localhost:7054 --caname ca-org1 -M ${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp --tls.certfiles ${PWD}/organizations/fabric-ca/org1/tls-cert.pem
   { set +x; } 2>/dev/null
 
-  cp ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/msp/config.yaml ${PWD}/organizations/peerOrganizations/SNM.shahada.ae/users/Admin@SNM.shahada.ae/msp/config.yaml
+  cp ${PWD}/organizations/peerOrganizations/org1.shahada.ae/msp/config.yaml ${PWD}/organizations/peerOrganizations/org1.shahada.ae/users/Admin@org1.shahada.ae/msp/config.yaml
 
 }
 
+function createOrg2() {
 
+  infoln "Enroll the CA admin"
+  mkdir -p organizations/peerOrganizations/org2.shahada.ae/
+
+  export FABRIC_CA_CLIENT_HOME=${PWD}/organizations/peerOrganizations/org2.shahada.ae/
+  #  rm -rf $FABRIC_CA_CLIENT_HOME/fabric-ca-client-config.yaml
+  #  rm -rf $FABRIC_CA_CLIENT_HOME/msp
+
+  set -x
+  fabric-ca-client enroll -u https://admin:adminpw@localhost:8054 --caname ca-org2 --tls.certfiles ${PWD}/organizations/fabric-ca/org2/tls-cert.pem
+  { set +x; } 2>/dev/null
+
+  echo 'NodeOUs:
+  Enable: true
+  ClientOUIdentifier:
+    Certificate: cacerts/localhost-8054-ca-org2.pem
+    OrganizationalUnitIdentifier: client
+  PeerOUIdentifier:
+    Certificate: cacerts/localhost-8054-ca-org2.pem
+    OrganizationalUnitIdentifier: peer
+  AdminOUIdentifier:
+    Certificate: cacerts/localhost-8054-ca-org2.pem
+    OrganizationalUnitIdentifier: admin
+  OrdererOUIdentifier:
+    Certificate: cacerts/localhost-8054-ca-org2.pem
+    OrganizationalUnitIdentifier: orderer' >${PWD}/organizations/peerOrganizations/org2.shahada.ae/msp/config.yaml
+
+  infoln "Register peer0"
+  set -x
+  fabric-ca-client register --caname ca-org2 --id.name peer0 --id.secret peer0pw --id.type peer --tls.certfiles ${PWD}/organizations/fabric-ca/org2/tls-cert.pem
+  { set +x; } 2>/dev/null
+
+  infoln "Register user"
+  set -x
+  fabric-ca-client register --caname ca-org2 --id.name user1 --id.secret user1pw --id.type client --tls.certfiles ${PWD}/organizations/fabric-ca/org2/tls-cert.pem
+  { set +x; } 2>/dev/null
+
+  infoln "Register the org admin"
+  set -x
+  fabric-ca-client register --caname ca-org2 --id.name org2admin --id.secret org2adminpw --id.type admin --tls.certfiles ${PWD}/organizations/fabric-ca/org2/tls-cert.pem
+  { set +x; } 2>/dev/null
+
+  mkdir -p organizations/peerOrganizations/org2.shahada.ae/peers
+  mkdir -p organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae
+
+  infoln "Generate the peer0 msp"
+  set -x
+  fabric-ca-client enroll -u https://peer0:peer0pw@localhost:8054 --caname ca-org2 -M ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/msp --csr.hosts peer0.org2.shahada.ae --tls.certfiles ${PWD}/organizations/fabric-ca/org2/tls-cert.pem
+  { set +x; } 2>/dev/null
+
+  cp ${PWD}/organizations/peerOrganizations/org2.shahada.ae/msp/config.yaml ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/msp/config.yaml
+
+  infoln "Generate the peer0-tls certificates"
+  set -x
+  fabric-ca-client enroll -u https://peer0:peer0pw@localhost:8054 --caname ca-org2 -M ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/tls --enrollment.profile tls --csr.hosts peer0.org2.shahada.ae --csr.hosts localhost --tls.certfiles ${PWD}/organizations/fabric-ca/org2/tls-cert.pem
+  { set +x; } 2>/dev/null
+
+  cp ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/tls/ca.crt
+  cp ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/tls/signcerts/* ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/tls/server.crt
+  cp ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/tls/keystore/* ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/tls/server.key
+
+  mkdir -p ${PWD}/organizations/peerOrganizations/org2.shahada.ae/msp/tlscacerts
+  cp ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/peerOrganizations/org2.shahada.ae/msp/tlscacerts/ca.crt
+
+  mkdir -p ${PWD}/organizations/peerOrganizations/org2.shahada.ae/tlsca
+  cp ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/peerOrganizations/org2.shahada.ae/tlsca/tlsca.org2.shahada.ae-cert.pem
+
+  mkdir -p ${PWD}/organizations/peerOrganizations/org2.shahada.ae/ca
+  cp ${PWD}/organizations/peerOrganizations/org2.shahada.ae/peers/peer0.org2.shahada.ae/msp/cacerts/* ${PWD}/organizations/peerOrganizations/org2.shahada.ae/ca/ca.org2.shahada.ae-cert.pem
+
+  mkdir -p organizations/peerOrganizations/org2.shahada.ae/users
+  mkdir -p organizations/peerOrganizations/org2.shahada.ae/users/User1@org2.shahada.ae
+
+  infoln "Generate the user msp"
+  set -x
+  fabric-ca-client enroll -u https://user1:user1pw@localhost:8054 --caname ca-org2 -M ${PWD}/organizations/peerOrganizations/org2.shahada.ae/users/User1@org2.shahada.ae/msp --tls.certfiles ${PWD}/organizations/fabric-ca/org2/tls-cert.pem
+  { set +x; } 2>/dev/null
+
+  cp ${PWD}/organizations/peerOrganizations/org2.shahada.ae/msp/config.yaml ${PWD}/organizations/peerOrganizations/org2.shahada.ae/users/User1@org2.shahada.ae/msp/config.yaml
+
+  mkdir -p organizations/peerOrganizations/org2.shahada.ae/users/Admin@org2.shahada.ae
+
+  infoln "Generate the org admin msp"
+  set -x
+  fabric-ca-client enroll -u https://org2admin:org2adminpw@localhost:8054 --caname ca-org2 -M ${PWD}/organizations/peerOrganizations/org2.shahada.ae/users/Admin@org2.shahada.ae/msp --tls.certfiles ${PWD}/organizations/fabric-ca/org2/tls-cert.pem
+  { set +x; } 2>/dev/null
+
+  cp ${PWD}/organizations/peerOrganizations/org2.shahada.ae/msp/config.yaml ${PWD}/organizations/peerOrganizations/org2.shahada.ae/users/Admin@org2.shahada.ae/msp/config.yaml
+
+}
 
 function createOrderer() {
 
@@ -138,8 +228,6 @@ function createOrderer() {
   mkdir -p organizations/ordererOrganizations/shahada.ae/orderers/shahada.ae
 
   mkdir -p organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae
-  mkdir -p organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae
-  mkdir -p organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae
 
   infoln "Generate the orderer msp"
   set -x
@@ -147,23 +235,6 @@ function createOrderer() {
   { set +x; } 2>/dev/null
 
   cp ${PWD}/organizations/ordererOrganizations/shahada.ae/msp/config.yaml ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer.shahada.ae/msp/config.yaml
-
-
-set -x
-  fabric-ca-client enroll -u https://orderer:ordererpw@localhost:9054 --caname ca-orderer -M ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/msp --csr.hosts orderer1.shahada.ae --csr.hosts localhost --tls.certfiles ${PWD}/organizations/fabric-ca/ordererOrg/tls-cert.pem
-  { set +x; } 2>/dev/null
-
-  cp ${PWD}/organizations/ordererOrganizations/shahada.ae/msp/config.yaml ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/msp/config.yaml
-
-
-set -x
-  fabric-ca-client enroll -u https://orderer:ordererpw@localhost:9054 --caname ca-orderer -M ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/msp --csr.hosts orderer2.shahada.ae --csr.hosts localhost --tls.certfiles ${PWD}/organizations/fabric-ca/ordererOrg/tls-cert.pem
-  { set +x; } 2>/dev/null
-
-  cp ${PWD}/organizations/ordererOrganizations/shahada.ae/msp/config.yaml ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/msp/config.yaml
-
-
-
 
   infoln "Generate the orderer-tls certificates"
   set -x
@@ -182,40 +253,6 @@ set -x
 
   mkdir -p organizations/ordererOrganizations/shahada.ae/users
   mkdir -p organizations/ordererOrganizations/shahada.ae/users/Admin@shahada.ae
-
-
-
-   set -x
-  fabric-ca-client enroll -u https://orderer:ordererpw@localhost:9054 --caname ca-orderer -M ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls --enrollment.profile tls --csr.hosts orderer1.shahada.ae --csr.hosts localhost --tls.certfiles ${PWD}/organizations/fabric-ca/ordererOrg/tls-cert.pem
-  { set +x; } 2>/dev/null
-
-  cp ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/ca.crt
-  cp ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/signcerts/* ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/server.crt
-  cp ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/keystore/* ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/server.key
-
-  mkdir -p ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/msp/tlscacerts
-  cp ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/msp/tlscacerts/tlsca.shahada.ae-cert.pem
-
-  mkdir -p ${PWD}/organizations/ordererOrganizations/shahada.ae/msp/tlscacerts
-  cp ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer1.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/ordererOrganizations/shahada.ae/msp/tlscacerts/tlsca.shahada.ae-cert.pem
-
-
-   set -x
-  fabric-ca-client enroll -u https://orderer:ordererpw@localhost:9054 --caname ca-orderer -M ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls --enrollment.profile tls --csr.hosts orderer2.shahada.ae --csr.hosts localhost --tls.certfiles ${PWD}/organizations/fabric-ca/ordererOrg/tls-cert.pem
-  { set +x; } 2>/dev/null
-
-  cp ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/ca.crt
-  cp ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/signcerts/* ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/server.crt
-  cp ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/keystore/* ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/server.key
-
-  mkdir -p ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/msp/tlscacerts
-  cp ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/msp/tlscacerts/tlsca.shahada.ae-cert.pem
-
-  mkdir -p ${PWD}/organizations/ordererOrganizations/shahada.ae/msp/tlscacerts
-  cp ${PWD}/organizations/ordererOrganizations/shahada.ae/orderers/orderer2.shahada.ae/tls/tlscacerts/* ${PWD}/organizations/ordererOrganizations/shahada.ae/msp/tlscacerts/tlsca.shahada.ae-cert.pem
-
-
-
 
   infoln "Generate the admin msp"
   set -x
